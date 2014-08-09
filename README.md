@@ -1,6 +1,6 @@
 # docker-aerospike-amc
 
-Run [AeroSpike Monitoring Console](http://www.aerospike.com/aerospike-monitoring-console/) inside `Docker`.
+Run [AeroSpike Monitoring Console](http://www.aerospike.com/aerospike-monitoring-console/) inside of `Docker`.
 
 
 # Licensing
