@@ -51,12 +51,12 @@ command=/bin/sh -c "/opt/amc/bin/start_amc_cron.sh"
 
 ## Start using AMC on your Mac
 ```bash
-open open http://127.0.0.1:8081/
+open http://127.0.0.1:8081/
 ```
 
 ## Using Supervisor Status Console on your Mac
 ```bash
-open open http://127.0.0.1:9001/
+open http://127.0.0.1:9001/
 ```
 
 
