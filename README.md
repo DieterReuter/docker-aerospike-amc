@@ -45,7 +45,7 @@ nodaemon=true
 [inet_http_server]
 port=0.0.0.0:9001
 
-[program:amc]
+[program:aerospike-amc]
 command=/bin/sh -c "/opt/amc/bin/start_amc_cron.sh"
 ```
 

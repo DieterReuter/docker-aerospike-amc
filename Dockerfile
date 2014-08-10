@@ -13,6 +13,7 @@ RUN apt-get -yy upgrade
 # install tools
 RUN apt-get -yy install wget curl git-core
 
+
 # install AMC deps
 RUN apt-get -yy install build-essential python-dev python-pip man
 
@@ -24,6 +25,7 @@ RUN wget -O amc.deb http://www.aerospike.com/download/amc/3.4.5/artifact/ubuntu1
 # use AMC webport 8081/tcp
 EXPOSE 8081
 
+
 # install supervisor
 RUN apt-get -yy install supervisor
 
@@ -31,5 +33,6 @@ RUN apt-get -yy install supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 EXPOSE 9001
 
-# launch AMC
+
+# start Supervisor and all defined services
 CMD ["/usr/bin/supervisord"]
