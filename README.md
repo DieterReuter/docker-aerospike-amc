@@ -3,23 +3,23 @@
 Run [AeroSpike Monitoring Console](http://www.aerospike.com/aerospike-monitoring-console/) inside of `Docker`.
 
 ### Build the Docker container
-`./build.sh`
+Script: `./build.sh`
 ```bash
 docker build -t dieterreuter/aerospike-amc .
 ```
 
 ### Run the Docker container (for production in the background)
-`./run.sh`
+Script: `./run.sh`
 ```bash
 docker run -d -p 8081:8081 dieterreuter/aerospike-amc
 ```
 
 ### Run the Docker container (for testing in interactice mode)
-`./run.sh`
+Script: `./run.sh`
 ```bash
 docker run -p 8081:8081 -t -i dieterreuter/aerospike-amc
 ```
-See our log output
+See our log output:
 ```log
 /usr/lib/python2.7/dist-packages/supervisor/options.py:295: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
   'Supervisord is running as root and it is searching '
@@ -35,7 +35,7 @@ See our log output
 
 
 ### Our used Supervisor configuration
-`./supervisord.conf`
+Configfile: `./supervisord.conf`
 ```config
 [supervisord]
 nodaemon=true
