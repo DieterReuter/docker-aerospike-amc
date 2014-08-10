@@ -29,6 +29,7 @@ RUN apt-get -yy install supervisor
 
 # copy our supervisor service definition
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+EXPOSE 9001
 
 # launch AMC
 CMD ["/usr/bin/supervisord"]
