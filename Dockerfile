@@ -10,8 +10,9 @@ RUN apt-get -yy update
 RUN apt-get -yy upgrade
 
 
-# install tools
-RUN apt-get -yy install wget curl git-core
+
+# install supervisor and other tools
+RUN apt-get -yy install supervisor wget curl git-core
 
 
 # install AMC deps
@@ -25,9 +26,6 @@ RUN wget -O amc.deb http://www.aerospike.com/download/amc/3.4.5/artifact/ubuntu1
 # use AMC webport 8081/tcp
 EXPOSE 8081
 
-
-# install supervisor
-RUN apt-get -yy install supervisor
 
 # copy our supervisor service definition
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
