@@ -14,7 +14,7 @@ Script: `./run.sh`
 docker run -d -p 8081:8081 dieterreuter/aerospike-amc
 ```
 
-### Run the Docker container (for testing in interactice mode)
+### Run the Docker container (for testing in interactive mode)
 Script: `./run.sh`
 ```bash
 docker run -p 8081:8081 -t -i dieterreuter/aerospike-amc
