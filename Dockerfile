@@ -10,8 +10,7 @@ RUN apt-get -yy update
 RUN apt-get -yy upgrade
 
 
-
-# install supervisor and other tools
+# install Supervisor and other tools
 RUN apt-get -yy install supervisor wget curl git-core
 
 
@@ -27,8 +26,10 @@ RUN wget -O amc.deb http://www.aerospike.com/download/amc/3.4.5/artifact/ubuntu1
 EXPOSE 8081
 
 
-# copy our supervisor service definition
+# copy our Supervisor service definition
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# use Supervisor Status webport 9001/tcp
 EXPOSE 9001
 
 
