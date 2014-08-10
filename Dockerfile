@@ -24,5 +24,11 @@ RUN wget -O amc.deb http://www.aerospike.com/download/amc/3.4.5/artifact/ubuntu1
 # use AMC webport 8081/tcp
 EXPOSE 8081
 
+# install supervisor
+RUN apt-get -yy install supervisor
+
+# copy our supervisor service definition
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 # launch AMC
-CMD ["/opt/amc/bin/start_amc_cron.sh"]
+CMD ["/usr/bin/supervisord"]
